@@ -1,0 +1,181 @@
+Index: app/src/main/res/layout/row.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\" >\r\n\r\n    <TextView\r\n        android:id=\"@+id/textViewNote\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Content\" />\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\" >\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView1star\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:src=\"@android:drawable/btn_star_big_off\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView2star\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:src=\"@android:drawable/btn_star_big_off\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView3star\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:src=\"@android:drawable/btn_star_big_off\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView4star\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:src=\"@android:drawable/btn_star_big_off\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView5star\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:src=\"@android:drawable/btn_star_big_off\" />\r\n\r\n    </LinearLayout>\r\n\r\n</LinearLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/row.xml	(revision 72fb04971bc1aebebeb013b5940c7bfb540a4f60)
++++ app/src/main/res/layout/row.xml	(date 1620110180716)
+@@ -1,49 +1,62 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++<LinearLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:orientation="vertical" >
++    android:layout_height="wrap_content"
++    android:orientation="vertical"
++    android:paddingHorizontal="20dp"
++    android:paddingVertical="10dp">
+ 
+     <TextView
+-        android:id="@+id/textViewNote"
++        android:id="@+id/revision_note_text_view"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+-        android:text="Content" />
+-
+-    <LinearLayout
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content" >
+-
+-        <ImageView
+-            android:id="@+id/imageView1star"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:src="@android:drawable/btn_star_big_off" />
+-
+-        <ImageView
+-            android:id="@+id/imageView2star"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:src="@android:drawable/btn_star_big_off" />
+-
+-        <ImageView
+-            android:id="@+id/imageView3star"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:src="@android:drawable/btn_star_big_off" />
++        android:text="Content"
++        android:layout_marginBottom="4dp"
++        android:textSize="18sp"/>
+ 
+-        <ImageView
+-            android:id="@+id/imageView4star"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:src="@android:drawable/btn_star_big_off" />
++    <RatingBar
++        android:id="@+id/rating_bar"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:isIndicator="true"
++        style="@style/Widget.AppCompat.RatingBar.Small"/>
++
++
++<!--    <LinearLayout-->
++<!--        android:layout_width="wrap_content"-->
++<!--        android:layout_height="wrap_content" >-->
++
++<!--        <ImageView-->
++<!--            android:id="@+id/imageView1star"-->
++<!--            android:layout_width="wrap_content"-->
++<!--            android:layout_height="wrap_content"-->
++<!--            android:src="@android:drawable/btn_star_big_off" />-->
++
++<!--        <ImageView-->
++<!--            android:id="@+id/imageView2star"-->
++<!--            android:layout_width="wrap_content"-->
++<!--            android:layout_height="wrap_content"-->
++<!--            android:src="@android:drawable/btn_star_big_off" />-->
+ 
+-        <ImageView
+-            android:id="@+id/imageView5star"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:src="@android:drawable/btn_star_big_off" />
++<!--        <ImageView-->
++<!--            android:id="@+id/imageView3star"-->
++<!--            android:layout_width="wrap_content"-->
++<!--            android:layout_height="wrap_content"-->
++<!--            android:src="@android:drawable/btn_star_big_off" />-->
+ 
+-    </LinearLayout>
++<!--        <ImageView-->
++<!--            android:id="@+id/imageView4star"-->
++<!--            android:layout_width="wrap_content"-->
++<!--            android:layout_height="wrap_content"-->
++<!--            android:src="@android:drawable/btn_star_big_off" />-->
++
++<!--        <ImageView-->
++<!--            android:id="@+id/imageView5star"-->
++<!--            android:layout_width="wrap_content"-->
++<!--            android:layout_height="wrap_content"-->
++<!--            android:src="@android:drawable/btn_star_big_off" />-->
++
++<!--    </LinearLayout>-->
+ 
+ </LinearLayout>
+Index: app/src/main/java/com/myapplicationdev/android/p04_revisionnotes/RevisionNotesArrayAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.myapplicationdev.android.p04_revisionnotes;\r\n\r\nimport android.content.Context;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.ArrayAdapter;\r\nimport android.widget.ImageView;\r\nimport android.widget.TextView;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class RevisionNotesArrayAdapter extends ArrayAdapter<Note> {\r\n\tContext context;\r\n\tArrayList<Note> notes;\r\n\tint resource;\r\n\tImageView iv1, iv2, iv3, iv4, iv5;\r\n\r\n\tpublic RevisionNotesArrayAdapter(Context context, int resource, ArrayList<Note> notes) {\r\n\t\tsuper(context, resource, notes);\r\n\t\tthis.context = context;\r\n\t\tthis.notes = notes;\r\n\t\tthis.resource = resource;\r\n\t}\r\n\r\n\t@Override\r\n\tpublic View getView(int position, View convertView, ViewGroup parent) {\r\n\t\tLayoutInflater inflater = (LayoutInflater) context\r\n\t\t\t\t.getSystemService(Context.LAYOUT_INFLATER_SERVICE);\r\n\r\n\t\tView rowView = inflater.inflate(resource, parent, false);\r\n\r\n\t\t//Match the UI components with Java variables\r\n\r\n\t\tNote note = notes.get(position);\r\n\r\n\t\t//Check if the property for starts >= 5, if so, \"light\" up the stars\r\n\t\tif (/*stars >= 5*/) {\r\n\t\t\tiv5.setImageResource(android.R.drawable.btn_star_big_on);\r\n\t\t\tiv4.setImageResource(android.R.drawable.btn_star_big_on);\r\n\t\t\tiv3.setImageResource(android.R.drawable.btn_star_big_on);\r\n\t\t\tiv2.setImageResource(android.R.drawable.btn_star_big_on);\r\n\t\t\tiv1.setImageResource(android.R.drawable.btn_star_big_on);\r\n\t\t}\r\n\r\n\t\treturn rowView;\r\n\t}\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/myapplicationdev/android/p04_revisionnotes/RevisionNotesArrayAdapter.java	(revision 72fb04971bc1aebebeb013b5940c7bfb540a4f60)
++++ app/src/main/java/com/myapplicationdev/android/p04_revisionnotes/RevisionNotesArrayAdapter.java	(date 1620110206059)
+@@ -6,15 +6,16 @@
+ import android.view.ViewGroup;
+ import android.widget.ArrayAdapter;
+ import android.widget.ImageView;
++import android.widget.RatingBar;
+ import android.widget.TextView;
+ 
+ import java.util.ArrayList;
+ 
+ public class RevisionNotesArrayAdapter extends ArrayAdapter<Note> {
+-	Context context;
+-	ArrayList<Note> notes;
+-	int resource;
+-	ImageView iv1, iv2, iv3, iv4, iv5;
++	private Context context;
++	private ArrayList<Note> notes;
++	private int resource;
++//	ImageView iv1, iv2, iv3, iv4, iv5;
+ 
+ 	public RevisionNotesArrayAdapter(Context context, int resource, ArrayList<Note> notes) {
+ 		super(context, resource, notes);
+@@ -25,23 +26,31 @@
+ 
+ 	@Override
+ 	public View getView(int position, View convertView, ViewGroup parent) {
++
++		// Inflate View
+ 		LayoutInflater inflater = (LayoutInflater) context
+ 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+-
+ 		View rowView = inflater.inflate(resource, parent, false);
+ 
+-		//Match the UI components with Java variables
++		// Views
++		TextView noteTV = rowView.findViewById(R.id.revision_note_text_view);
++		RatingBar ratingBar = rowView.findViewById(R.id.rating_bar);
+ 
++		// Get Data
+ 		Note note = notes.get(position);
+ 
++		// Set Data of Views
++		noteTV.setText(note.getNotesContent());
++		ratingBar.setNumStars(note.getStars());
++
+ 		//Check if the property for starts >= 5, if so, "light" up the stars
+-		if (/*stars >= 5*/) {
+-			iv5.setImageResource(android.R.drawable.btn_star_big_on);
+-			iv4.setImageResource(android.R.drawable.btn_star_big_on);
+-			iv3.setImageResource(android.R.drawable.btn_star_big_on);
+-			iv2.setImageResource(android.R.drawable.btn_star_big_on);
+-			iv1.setImageResource(android.R.drawable.btn_star_big_on);
+-		}
++//		if (/*stars >= 5*/) {
++//			iv5.setImageResource(android.R.drawable.btn_star_big_on);
++//			iv4.setImageResource(android.R.drawable.btn_star_big_on);
++//			iv3.setImageResource(android.R.drawable.btn_star_big_on);
++//			iv2.setImageResource(android.R.drawable.btn_star_big_on);
++//			iv1.setImageResource(android.R.drawable.btn_star_big_on);
++//		}
+ 
+ 		return rowView;
+ 	}
