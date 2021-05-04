@@ -94,6 +94,8 @@ public class DBHelper extends SQLiteOpenHelper {
 		cursor.close();
 		db.close();
 
+		Log.e("getAllNotes: ", tasks.toString());
+
 		return tasks;
 	}
 

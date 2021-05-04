@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class RevisionNotesArrayAdapter extends ArrayAdapter<Note> {
+
 	private Context context;
 	private ArrayList<Note> notes;
 	private int resource;
@@ -41,7 +42,7 @@ public class RevisionNotesArrayAdapter extends ArrayAdapter<Note> {
 
 		// Set Data of Views
 		noteTV.setText(note.getNotesContent());
-		ratingBar.setNumStars(note.getStars());
+		ratingBar.setRating((float) note.getStars());
 
 		//Check if the property for starts >= 5, if so, "light" up the stars
 //		if (/*stars >= 5*/) {
@@ -54,7 +55,5 @@ public class RevisionNotesArrayAdapter extends ArrayAdapter<Note> {
 
 		return rowView;
 	}
-
-
 
 }

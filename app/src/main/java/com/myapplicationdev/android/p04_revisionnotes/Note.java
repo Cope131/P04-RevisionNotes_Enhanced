@@ -37,4 +37,13 @@ public class Note {
     public void setStars(int stars) {
         this.stars = stars;
     }
+
+    @Override
+    public String toString() {
+        return "Note{" +
+                "id=" + id +
+                ", notesContent='" + notesContent + '\'' +
+                ", stars=" + stars +
+                '}';
+    }
 }
